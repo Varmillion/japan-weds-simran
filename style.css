@@ -32,10 +32,10 @@ img {
   display: block;
   transition: .6s cubic-bezier(.2,.8,.2,1);
 }
-
+/* 
 img:hover {
   transform: scale(1.03);
-}
+} */
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
@@ -471,6 +471,14 @@ section {
   }
 }
 
+@media (min-width: 769px) {
+  .footer.snap-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 
 .reveal:nth-child(1) { transition-delay: 0s; }

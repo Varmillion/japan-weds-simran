@@ -22,14 +22,28 @@
     </div>
   </section>
 
-  <!-- IMAGE GRID -->
+  <!-- IMAGE GRID
   <section class="image-grid container">
     <div class="">
       <img class="image-sub-grid" src="image2.jpg" alt="">
       <img src="image4.jpg" alt="">
     </div>
     <img src="image3.jpg" alt="">
-  </section>
+  </section> -->
+
+  <!-- IMAGE GRID -->
+<section class="image-grid container">
+  <div>
+    <img class="reveal from-left" src="image2.jpg" alt="">
+    <img class="reveal from-right" src="image4.jpg" alt="">
+  </div>
+
+  <img class="reveal from-left" src="image3.jpg" alt="">
+</section>
+
+
+
+
 
   <!-- STORY -->
   <section class="story">
@@ -38,23 +52,23 @@
       <p>
         We met, became friends, and slowly started sharing the little things that mattered to us.
         Somewhere along the way, those little moments turned into love without us even noticing.
-        And now, time has flown by, and here we are — ready to start our forever. ❤️
+        And now, time has flown by, and here we are ready to start our forever.
       </p>
     </div>
-    <img src="image5.png" alt="">
+    <!-- <img src="image5.png" alt=""> -->
+    <img class="reveal from-top" src="image5.png" alt="">
   </section>
 
   <!-- INVITE -->
   <div class="invite container">
     <img src="image6.jpg" alt="">
-    <div class="invite-box">
+    <div class="invite-box text-box-one">
       <div class="invite-content">
         <h2>With Love, We Invite You</h2>
       <p>
-        With your love and presence, we invite you to grace the auspicious occasion of our Anand Karaj
-        on 23rd February 2026.<br><br>
-        As our families come together as one, we ask you to be there with us — to celebrate, and to
-        share this beautiful beginning together.
+        With much love and happiness, we invite you to grace the auspicious occasion of our Anand Karaj
+        on 23rd February 2026. <br> As our families come together as one, we’d love for you to be there with us 
+        — to gather, to celebrate, and to share this beautiful beginning together.
       </p>
       </div>
       
@@ -63,7 +77,7 @@
 
   <!-- DAY 01 -->
   <div class="event container">
-    <div class="event-box">
+    <div class="event-box text-box-one">
       <div class="invite-content">
         <h3>Day 01<br>An Evening of Joy</h3>
       <p class="date">FEBRUARY 22, 2026</p>
@@ -77,11 +91,11 @@
   </div>
 
   <!-- DAY 02 -->
-  <div class="event container reverse">
+  <div class="event container">
     <img src="image8.jpg" alt="">
-    <div class="event-text">
+    <div class="event-box text-box-one">
       <div class="invite-content">
-      <h3>Day 02<br>Where Forever Begins</h3>
+        <h3>Day 02<br>Where Forever Begins</h3>
       <p class="date">FEBRUARY 23, 2026</p>
       <ul>
         <li>11:00 AM — Anand Karaj</li>
@@ -91,16 +105,26 @@
     </div>
   </div>
 
+  <!-- <div class="event container reverse">
+    
+    <div class="event-text text-box-one">
+      <div class="event-content">
+      
+      </div>
+    </div>
+  </div> -->
+
   <!-- TREK STORY -->
   <div class="trek">
-    <div class="trek-text">
+    <div class="trek-text text-box-one">
       <div class="invite-content">
       <h2>Who Knew a Trek<br>Would Do This?</h2>
       <p>
-        Kothi was where it all truly began. The place where Japan and Simran stood,
-        without a doubt, that this was it. Somewhere between long walks, shared laughs,
-        a broken signal, and a small tent, we found ourselves choosing each other —
-        again and again.
+        Kashmir was where it all truly began, the place where Japan and Simran knew, without a doubt, that this was it.
+        Somewhere between long walks, shared laughs, a turban, a small mirror, and mountain views, that friendship grew
+        stronger. With every trek, the heights got bigger — and so did the bond. Because with the right companion, the climb
+        feels lighter, the strength feels deeper, and the journey feels more meaningful. What began as shared trails slowly turned
+        into shared dreams, and now, this journey is leading them to their greatest adventure yet — a lifetime together.
       </p>
     </div>
     </div>
@@ -110,20 +134,60 @@
   <!-- FOOTER -->
   <section class="footer">
     <h2>We can’t wait to hear from you</h2>
-
+<!-- 
     <div class="thumbs">
       <img src="image10.jpg">
       <img src="image11.jpg">
       <img src="image12.jpg">
       <img src="image13.jpg">
       <img src="image14.jpg">
-    </div>
+    </div> -->
+    <!-- <div class="thumbs">
+  <img src="image10.jpg">
+  <img src="image11.jpg">
+  <img class="wide" src="image12.jpg">
+  <img src="image13.jpg">
+  <img src="image14.jpg">
+</div> -->
+ 
+    <div class="thumbs">
+  <img class="reveal" src="image10.jpg">
+  <img class="reveal" src="image11.jpg">
+  <img class="reveal wide" src="image12.jpg">
+  <img class="reveal" src="image13.jpg">
+  <img class="reveal" src="image14.jpg">
+</div>
+
 
     <div class="contacts">
       Japanjot Singh : +91 98765 77473<br>
       Simran Kaur : +91 98963 53472
     </div>
   </section>
+
+
+
+
+
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target); // animate only once
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

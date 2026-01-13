@@ -216,6 +216,13 @@ section {
 }
 
 /* INVITE BOX */
+
+
+
+.invite{
+  background: var(--brown);
+}
+
 .invite-box {
   background: var(--brown);
   height: 100%;
@@ -342,7 +349,7 @@ section {
   .event-box {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
   }
 
   .invite-box,
@@ -369,10 +376,10 @@ section {
   padding: 0;
   }
 
-  .thumbs img {
+  /* .thumbs img {
     width: 60px;
     height: 60px;
-  }
+  } */
 
   .footer {
     height: 400px;
@@ -524,3 +531,7 @@ section {
 
 
 
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}

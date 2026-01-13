@@ -286,8 +286,6 @@ section {
 
 /* -----------------new till here------------------ */
 
-
-
 .story {
   background-color: var(--mustard);
   color: var(--green);
@@ -300,6 +298,7 @@ section {
 .story-text h2 {
   font-size: 42px;
 }
+
 /* STORY / INVITE / EVENTS / TREK */
 .story, .invite, .event, .trek {
   display: grid;
